@@ -1,0 +1,4 @@
+service: |
+    pg_start: pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.l
+    pg_stop:  pg_ctl -D /usr/local/var/postgres stop
+    start_mongod: mongod -dbpath ~/data/mongodb &
