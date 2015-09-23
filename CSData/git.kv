@@ -1,3 +1,4 @@
 git: |
     更新本地origin remote 指向: git config remote.origin.url git@gitlab.breadtrip.com:<各部门repo>/breadtripserver.git
     重置当前commit为干净状态: git reset --hard HEAD
+    将本地误提交但未推送的commit改回unstage状态: git reset HEAD~1
