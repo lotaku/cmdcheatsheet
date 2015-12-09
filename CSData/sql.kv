@@ -1,0 +1,2 @@
+sql: |
+    使用join,count,group,order: select name, count(*) from (select a.destination_id, b.name from vacation_product as a  join vacation_destination as b on a.destination_id=b.id) x group by name order by count DESC;
