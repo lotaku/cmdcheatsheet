@@ -4,3 +4,5 @@ git: |
     更新本地origin remote 指向: git remote set-url origin git@gitlab.breadtrip.com:shenzhen/productservice.git
     重置当前commit为干净状态: git reset --hard HEAD
     将本地误提交但未推送的commit改回unstage状态: git reset HEAD~1
+    清除reset后残余的untracked files 和空文件夹: git clean -f -d
+    重置为远程commit:git reset --hard origin/feature/product_client
