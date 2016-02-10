@@ -1,5 +1,6 @@
 screen: |
     *参数说明
+    删除screen并退出内部程序: screen -X -S [session # you want to kill] quit
     -A 　将所有的视窗都调整为目前终端机的大小。
     -d <作业名称> 　将指定的screen作业离线。
     -h <行数> 　指定视窗的缓冲区行数。
@@ -32,3 +33,4 @@ screen: |
     C-a t : Time，显示当前时间，和系统的 load 
     C-a k : kill window，强行关闭当前的 window
     C-a [ : 进入 copy mode，在 copy mode 下可以回滚、搜索、复制就像用使用 vi 一样
+

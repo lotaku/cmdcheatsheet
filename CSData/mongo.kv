@@ -5,3 +5,4 @@ mongo: |
     查询包含:db.users.findOne({"username" : {$regex : ".*son.*"}});
     更新198订单状态:db.order.update({"order_id": "PO1512310308541308278284"}, { $set: {"status": "PAID_CONFIRMING"}});
     更新多个产品:db.productsku.update({"product": {$in: [176, 263, 219]}}, {$set:{"end_date" : ISODate("2016-12-31T00:00:00.000Z")}}, {multi: true})
+    排序:db.getCollection('product').find({}).sort({'_id':-1})
