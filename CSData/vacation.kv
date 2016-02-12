@@ -6,6 +6,8 @@ vacation: |
     导入celery任务: from tasks.vacation_lixing import bind_lixing_to_mtu
     south 应用迁移文件: python manage.py migrate vacation 0034_auto__add_vacationorder --ignore-ghost-migrations --settings=configs.local_default
     south 创建迁移文件: python manage.py schemamigration vacation --auto --settings=configs.local_default
+    执行运行某任务脚本:python scripts/run_script_vacation.py vacation_misc.migrating_data_product_order --settings=configs.local_default
     dev web日志:tail -200f /data/logs/vacation/uwsgi/web_dev.log
     dev api日志:tail -200f /data/logs/vacation/uwsgi/api_dev.log
     dev shell:cd /home/workspace/vacation_dev/BreadTripServer/webapps python manage.py shell --settings=configs.vacation_dev_celeryd
+
