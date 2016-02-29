@@ -6,3 +6,4 @@ psql: |
     断开其他用户的连接: SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname='testdb' AND pid<>pg_backend_pid();
     断开正在等待的连接:select pg_terminate_backend(pid) from pg_stat_activity where waiting=TRUE;
     登录用户: sudo -su postgres
+    创建数据库:/usr/local/bin/createdb 数据库名
