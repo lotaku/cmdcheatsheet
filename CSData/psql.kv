@@ -6,8 +6,13 @@ psql: |
     查看数据库信息: 进psql shell, \l+ (+号能查大小)
     断开其他用户的连接: SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname='testdb' AND pid<>pg_backend_pid();
     断开正在等待的连接:select pg_terminate_backend(pid) from pg_stat_activity where waiting=TRUE;
+    查看连接状态: select * from pg_stat_activity WHERE datname='venti_dev' and waiting='t';
+    解死锁: select pg_terminate_backend(pid) from pg_stat_activity WHERE datname='venti_dev' and state='idle in transaction';
     登录用户: sudo -su postgres
     创建数据库:/usr/local/bin/createdb 数据库名
     ------------------- 以下为 ubuntu ----------------------
     登录: sudo -u postgres psql
+    shell：命令
+    1: sudo -u postgres dropdb wp3
+    2: sudo -u postgres createdb -O l  wp3
 
