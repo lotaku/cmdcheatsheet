@@ -10,6 +10,7 @@ psql: |
     解死锁: select pg_terminate_backend(pid) from pg_stat_activity WHERE datname='venti_dev' and state='idle in transaction';
     登录用户: sudo -su postgres
     创建数据库:/usr/local/bin/createdb 数据库名
+    修改id_seq: alter sequence 表名_id_seq restart with 999999
     ------------------- 以下为 ubuntu ----------------------
     登录: sudo -u postgres psql
     shell：命令
