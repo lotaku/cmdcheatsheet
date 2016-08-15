@@ -7,3 +7,8 @@ linux: |
     查看整个系统空间：sudo df -hl
     修改系统时间: sudo date --set "13 May 2016 11:36:00"
     查看端口占用: lsof -i:21
+    md5:echo "this will be encrypted" | md5
+    list file path in dir:
+        Use this for dirs: ls -d -1 $PWD/**
+        Use this for files: ls -d -1 $PWD/*.*
+        this for everything: ls -d -1 $PWD/**/*

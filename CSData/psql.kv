@@ -13,7 +13,10 @@ psql: |
     修改id_seq: alter sequence 表名_id_seq restart with 999999
     ------------------- 以下为 ubuntu ----------------------
     登录: sudo -u postgres psql
-    shell：命令
+    shell：命令 # 注意要 分号 结尾
     1: sudo -u postgres dropdb wp3
     2: sudo -u postgres createdb -O l  wp3
+    3: CREATE USER tester WITH PASSWORD 'test_password'
+    4: GRANT ALL PRIVILEGES ON DATABASE "test_database" to tester;
+    5: ALTER USER wp3  WITH PASSWORD 'wp3qQ2@wW';
 
